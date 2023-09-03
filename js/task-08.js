@@ -5,10 +5,15 @@ form.addEventListener("submit", (event) => {
   const {
     elements: { email, password },
   } = event.currentTarget;
-  console.log(email.value, password.value);
+
   if (!email.value || !password.value) {
     return alert("Wypełnij wszystkie pola!!!");
   }
-  console.log(`Login: ${email.value}, Password: ${password.value}`);
+
+  const data = {
+    email: email.value,
+    password: password.value,
+  };
+  console.log(data);
   form.reset();
 });
